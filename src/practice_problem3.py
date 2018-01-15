@@ -155,8 +155,14 @@ def practice_problem3a(circles):
     Type hints:
       :type sequence: [rg.Circle]
     """
+    product = 1
+    if len(circles) > 0:
+        for circle in circles:
+            product = product * circle.center.x
+    return product
+
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -265,8 +271,12 @@ def practice_problem3b(sequence):
     Type hints:
       :type: sequence: list    or tuple or string
     """
+    for k in range(len(sequence) - 1):
+        if sequence[k] == sequence[len(sequence) - 1]:
+            return True
+    return False
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:  You are NOT allowed to use the
@@ -353,8 +363,13 @@ def practice_problem3c(sequence):
     Type hints:
       :type: sequence: list    or tuple or string
     """
+    num_seq = []
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            num_seq += [k]
+    return num_seq
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -435,8 +450,12 @@ def practice_problem3d(sequence):
     Type hints:
       :type: sequence: list    or tuple or string
     """
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            return k
+    return -1
     ####################################################################
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -521,8 +540,12 @@ def practice_problem3e(sequence):
     Type hints:
       :type sequence: list(float)    or tuple(float)
     """
+    total = 0
+    for k in range(0, len(sequence), 2):
+        total += sequence[k]
+    return total
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
